@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import css from './friendList.css'
-
+console.log(css);
 
 
 export const FriendList = ({friends, isOnline}) => {
