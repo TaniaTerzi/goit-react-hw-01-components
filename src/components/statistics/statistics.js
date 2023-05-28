@@ -5,8 +5,7 @@ console.log(css);
 export const Statistics = ({title, stats}) => {
     return (
       <section className="statistics">
-        <h2 className="title">{title}</h2>
-
+        {title && <h2 className="title">{title}</h2>}
         <ul className="stat-list">
           {stats.map(Statistics =>
             <li className="item" key={Statistics.id}>
@@ -21,5 +20,10 @@ export const Statistics = ({title, stats}) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array,
+  stats: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  }),
+  ).isRequired
 };

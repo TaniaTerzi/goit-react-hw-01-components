@@ -27,7 +27,7 @@ import transactions from './transactionHistory/transactions.json';
 
 
 export const App = () => {
-const isTitle = true;
+// const isTitle = true;
 
   return (
     <div>
@@ -38,9 +38,9 @@ const isTitle = true;
         avatar={user.avatar}
         stats={user.stats}
       />
-      {isTitle ? <Statistics title="Upload stats" stats={data} /> :
-      <Statistics stats={data} />
-      }
+     <Statistics title="Upload stats" stats={data} /> 
+    <Statistics stats={data} />
+      
       <FriendList friends={friends} />; 
       <TransactionHistory items={transactions} />;      
     </div>

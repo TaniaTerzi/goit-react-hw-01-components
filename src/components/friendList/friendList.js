@@ -3,7 +3,7 @@ import css from './friendList.css'
 console.log(css);
 
 
-export const FriendList = ({friends, isOnline}) => {
+export const FriendList = ({friends}) => {
   
     return (
     <ul className="friend-list">
@@ -24,7 +24,5 @@ export const FriendList = ({friends, isOnline}) => {
 
 
 FriendList.propTypes = {
-    isOnline: PropTypes.bool,
-    avatar: PropTypes.string,
-    name: PropTypes.string,
+  friends: PropTypes.array.isRequired,
 };
